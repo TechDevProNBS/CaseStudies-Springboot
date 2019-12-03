@@ -1,4 +1,4 @@
 package com.nationwide.groupproject.Entities;
 
-public class Search {
+public class Data {
 }
