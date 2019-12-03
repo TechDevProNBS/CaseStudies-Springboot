@@ -30,7 +30,7 @@ public class DataController {
     }
 
     @DeleteMapping("/DeleteRecord/{I}")
-    public void deleteRecord(@PathVariable long I){
+    public void deleteRecord(@PathVariable int I){
         repo.delete(repo.findById(I));
     }
 
