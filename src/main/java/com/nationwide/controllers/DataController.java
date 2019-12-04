@@ -40,29 +40,6 @@ public class DataController {
 //    public ArrayList<Data> filterRecords(@PathVariable String stream, @PathVariable String year, @PathVariable String role, @PathVariable String location){
 //        String query = "SELECT * FROM tdp_table WHERE ";
 //
-//        if(stream.equals("-1")){
-//            query += "NOT stream IS NULL AND";
-//        } else {
-//            query += "stream=" + stream;
-//        }
-//
-//        if(year.equals("-1")){
-//            query += "NOT year IS NULL AND";
-//        } else {
-//            query += "year=" + year;
-//        }
-//
-//        if(role.equals("-1")){
-//            query += "NOT role IS NULL AND";
-//        } else {
-//            query += "role=" + role;
-//        }
-//
-//        if(location.equals("-1")){
-//            query += "NOT location IS NULL";
-//        } else {
-//            query += "location=" + location;
-//        }
 //
 //        return repo.filter(query);
 //    }
