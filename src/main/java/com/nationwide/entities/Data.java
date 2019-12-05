@@ -12,45 +12,48 @@ public class Data {
     private String name;
     private String stream;
     private String background;
-    private String tdpText;
+    private String mainText;
     private String email;
     private String facebook;
     private String linkedin;
     private String twitter;
-    private String phoneNumber;
-    private String area;
-    private String joinDate;
-    private String programme;
-    private String internalExternal;
-    private String jobTitle;
-    private String locationDescription;
-    private String locationAddress;
-    private String districtCode;
-    private String districtDescription;
-    private String areaCode;
-    private String departmentDescription;
+    //private String phoneNumber;
+    //private String area;
+    private String startDate;
+    //private String programme;
+    //private String internalExternal;
+    //private String jobTitle;
+    //private String locationDescription;
+    //private String locationAddress;
+    //private String districtCode;
+    //This corresponds to district description:
+    private String currentRole;
+    //private String areaCode;
+    //private String departmentDescription;
+    private String photo;
 
-    public Data(String name, String stream, String background, String tdpText, String email, String facebook, String linkedin, String twitter, String phoneNumber, String area, String joinDate, String programme, String internalExternal, String jobTitle, String locationDescription, String locationAddress, String districtCode, String districtDescription, String areaCode, String departmentDescription){
+    public Data(String name, String stream, String background, String mainText, String email, String facebook, String linkedin, String twitter, String startDate, String currentRole, String photo){
         this.name = name;
         this.stream = stream;
         this.background = background;
-        this.tdpText = tdpText;
+        this.mainText = mainText;
         this.email = email;
         this.facebook = facebook;
         this.linkedin = linkedin;
         this.twitter = twitter;
-        this.phoneNumber = phoneNumber;
-        this.area = area;
-        this.joinDate = joinDate;
-        this.programme = programme;
-        this.internalExternal = internalExternal;
-        this.jobTitle = jobTitle;
-        this.locationDescription = locationDescription;
-        this.locationAddress = locationAddress;
-        this.districtCode = districtCode;
-        this.districtDescription = districtDescription;
-        this.areaCode = areaCode;
-        this.departmentDescription = departmentDescription;
+        //this.phoneNumber = phoneNumber;
+        //this.area = area;
+        this.startDate = startDate;
+//        this.programme = programme;
+//        this.internalExternal = internalExternal;
+//        this.jobTitle = jobTitle;
+//        this.locationDescription = locationDescription;
+//        this.locationAddress = locationAddress;
+//        this.districtCode = districtCode;
+        this.currentRole = currentRole;
+//        this.areaCode = areaCode;
+//        this.departmentDescription = departmentDescription;
+        this.photo = photo;
     }
 
     public Data(){}
@@ -79,12 +82,12 @@ public class Data {
         this.background = background;
     }
 
-    public String getTdpText() {
-        return tdpText;
+    public String getMainText() {
+        return mainText;
     }
 
-    public void setTdpText(String tdpText) {
-        this.tdpText = tdpText;
+    public void setMainText(String mainText) {
+        this.mainText = mainText;
     }
 
     public String getEmail() {
@@ -119,99 +122,108 @@ public class Data {
         this.twitter = twitter;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getArea() {
-        return area;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
-    }
+//    public String getPhoneNumber() {
+//        return phoneNumber;
+//    }
+//
+//    public void setPhoneNumber(String phoneNumber) {
+//        this.phoneNumber = phoneNumber;
+//    }
+//
+//    public String getArea() {
+//        return area;
+//    }
+//
+//    public void setArea(String area) {
+//        this.area = area;
+//    }
 
     public String getJoinDate() {
-        return joinDate;
+        return startDate;
     }
 
     public void setJoinDate(String joinDate) {
-        this.joinDate = joinDate;
+        this.startDate = joinDate;
     }
 
-    public String getProgramme() {
-        return programme;
+//    public String getProgramme() {
+//        return programme;
+//    }
+//
+//    public void setProgramme(String programme) {
+//        this.programme = programme;
+//    }
+//
+//    public String getInternalExternal() {
+//        return internalExternal;
+//    }
+//
+//    public void setInternalExternal(String internalExternal) {
+//        this.internalExternal = internalExternal;
+//    }
+//
+//    public String getJobTitle() {
+//        return jobTitle;
+//    }
+//
+//    public void setJobTitle(String jobTitle) {
+//        this.jobTitle = jobTitle;
+//    }
+//
+//    public String getLocationDescription() {
+//        return locationDescription;
+//    }
+//
+//    public void setLocationDescription(String locationDescription) {
+//        this.locationDescription = locationDescription;
+//    }
+//
+//    public String getLocationAddress() {
+//        return locationAddress;
+//    }
+//
+//    public void setLocationAddress(String locationAddress) {
+//        this.locationAddress = locationAddress;
+//    }
+//
+//    public String getDistrictCode() {
+//        return districtCode;
+//    }
+//
+//    public void setDistrictCode(String districtCode) {
+//        this.districtCode = districtCode;
+//    }
+
+    public String getCurrentRole() {
+        return currentRole;
     }
 
-    public void setProgramme(String programme) {
-        this.programme = programme;
+    public void setCurrentRole(String currentRole) {
+        this.currentRole = currentRole;
     }
 
-    public String getInternalExternal() {
-        return internalExternal;
+//    public String getAreaCode() {
+//        return areaCode;
+//    }
+//
+//    public void setAreaCode(String areaCode) {
+//        this.areaCode = areaCode;
+//    }
+//
+//    public String getDepartmentDescription() {
+//        return departmentDescription;
+//    }
+//
+//    public void setDepartmentDescription(String departmentDescription) {
+//        this.departmentDescription = departmentDescription;
+//    }
+
+
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setInternalExternal(String internalExternal) {
-        this.internalExternal = internalExternal;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
-
-    public String getLocationDescription() {
-        return locationDescription;
-    }
-
-    public void setLocationDescription(String locationDescription) {
-        this.locationDescription = locationDescription;
-    }
-
-    public String getLocationAddress() {
-        return locationAddress;
-    }
-
-    public void setLocationAddress(String locationAddress) {
-        this.locationAddress = locationAddress;
-    }
-
-    public String getDistrictCode() {
-        return districtCode;
-    }
-
-    public void setDistrictCode(String districtCode) {
-        this.districtCode = districtCode;
-    }
-
-    public String getDistrictDescription() {
-        return districtDescription;
-    }
-
-    public void setDistrictDescription(String districtDescription) {
-        this.districtDescription = districtDescription;
-    }
-
-    public String getAreaCode() {
-        return areaCode;
-    }
-
-    public void setAreaCode(String areaCode) {
-        this.areaCode = areaCode;
-    }
-
-    public String getDepartmentDescription() {
-        return departmentDescription;
-    }
-
-    public void setDepartmentDescription(String departmentDescription) {
-        this.departmentDescription = departmentDescription;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }
