@@ -20,13 +20,13 @@ public class DataController {
         return repo.saveAndFlush(data);
     }
 
-    @PostMapping
+    @PutMapping
     public Data updateRecord(@RequestBody Data data){
         return repo.save(data);
     }
 
-    @DeleteMapping("/{I}")
-    public void deleteRecord(@PathVariable int I){
+    @DeleteMapping
+    public void deleteRecord(@RequestBody int I){
         Data data = repo.findById(I).orElseThrow(() -> new RuntimeException("Record not found"));
         repo.delete(data);
     }
@@ -35,36 +35,4 @@ public class DataController {
     public List<Data> showAllRecords(){
         return repo.findAll();
     }
-
-//    @GetMapping("/filter")
-//    public ArrayList<Data> filterRecords(@PathVariable String stream, @PathVariable String year, @PathVariable String role, @PathVariable String location){
-//        String query = "SELECT * FROM tdp_table WHERE ";
-//
-//        if(stream.equals("-1")){
-//            query += "NOT stream IS NULL AND";
-//        } else {
-//            query += "stream=" + stream;
-//        }
-//
-//        if(year.equals("-1")){
-//            query += "NOT year IS NULL AND";
-//        } else {
-//            query += "year=" + year;
-//        }
-//
-//        if(role.equals("-1")){
-//            query += "NOT role IS NULL AND";
-//        } else {
-//            query += "role=" + role;
-//        }
-//
-//        if(location.equals("-1")){
-//            query += "NOT location IS NULL";
-//        } else {
-//            query += "location=" + location;
-//        }
-//
-//        return repo.filter(query);
-//    }
-
 }
