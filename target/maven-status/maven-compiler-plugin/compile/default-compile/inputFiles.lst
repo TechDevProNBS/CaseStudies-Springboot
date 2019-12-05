@@ -1,4 +1,5 @@
-C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\groupproject\Repositories\DataRepo.java
-C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\groupproject\App.java
-C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\groupproject\Controllers\DataController.java
-C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\groupproject\Entities\Data.java
+C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\repositories\DataRepo.java
+C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\entities\Data.java
+C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\App.java
+C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\services\DataService.java
+C:\Users\admin\Documents\groupspring\src\main\java\com\nationwide\controllers\DataController.java
