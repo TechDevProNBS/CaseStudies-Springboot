@@ -3,8 +3,10 @@ package com.nationwide.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="tdp_table")
 public class Data {
     @Id
     @GeneratedValue
