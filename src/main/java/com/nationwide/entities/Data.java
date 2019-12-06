@@ -1,9 +1,6 @@
 package com.nationwide.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="tdp_table")
@@ -14,14 +11,14 @@ public class Data {
     private String name;
     private String stream;
     private String background;
-    private String mainText;
+    private String maintext;
     private String email;
     private String facebook;
     private String linkedin;
     private String twitter;
     //private String phoneNumber;
     //private String area;
-    private String startDate;
+     private String startdate;
     //private String programme;
     //private String internalExternal;
     //private String jobTitle;
@@ -29,30 +26,30 @@ public class Data {
     //private String locationAddress;
     //private String districtCode;
     //This corresponds to district description:
-    private String currentRole;
+    private String currentrole;
     //private String areaCode;
     //private String departmentDescription;
     private String photo;
 
-    public Data(String name, String stream, String background, String mainText, String email, String facebook, String linkedin, String twitter, String startDate, String currentRole, String photo){
+    public Data(String name, String stream, String background, String maintext, String email, String facebook, String linkedin, String twitter, String startdate, String currentrole, String photo){
         this.name = name;
         this.stream = stream;
         this.background = background;
-        this.mainText = mainText;
+        this.maintext = maintext;
         this.email = email;
         this.facebook = facebook;
         this.linkedin = linkedin;
         this.twitter = twitter;
         //this.phoneNumber = phoneNumber;
         //this.area = area;
-        this.startDate = startDate;
+        this.startdate = startdate;
 //        this.programme = programme;
 //        this.internalExternal = internalExternal;
 //        this.jobTitle = jobTitle;
 //        this.locationDescription = locationDescription;
 //        this.locationAddress = locationAddress;
 //        this.districtCode = districtCode;
-        this.currentRole = currentRole;
+        this.currentrole = currentrole;
 //        this.areaCode = areaCode;
 //        this.departmentDescription = departmentDescription;
         this.photo = photo;
@@ -84,12 +81,12 @@ public class Data {
         this.background = background;
     }
 
-    public String getMainText() {
-        return mainText;
+    public String getMaintext() {
+        return maintext;
     }
 
-    public void setMainText(String mainText) {
-        this.mainText = mainText;
+    public void setMaintext(String maintext) {
+        this.maintext = maintext;
     }
 
     public String getEmail() {
@@ -141,11 +138,11 @@ public class Data {
 //    }
 
     public String getJoinDate() {
-        return startDate;
+        return startdate;
     }
 
     public void setJoinDate(String joinDate) {
-        this.startDate = joinDate;
+        this.startdate = joinDate;
     }
 
 //    public String getProgramme() {
@@ -196,12 +193,12 @@ public class Data {
 //        this.districtCode = districtCode;
 //    }
 
-    public String getCurrentRole() {
-        return currentRole;
+    public String getCurrentrole() {
+        return currentrole;
     }
 
-    public void setCurrentRole(String currentRole) {
-        this.currentRole = currentRole;
+    public void setCurrentrole(String currentrole) {
+        this.currentrole = currentrole;
     }
 
 //    public String getAreaCode() {
