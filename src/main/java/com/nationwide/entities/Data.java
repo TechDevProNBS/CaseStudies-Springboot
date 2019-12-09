@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Data {
     @Id
     @GeneratedValue
-    private Integer id;
+    private int id;
     private String name;
     private String stream;
     private String background;
@@ -24,8 +24,9 @@ public class Data {
     private String districtdescription;
     private String photo;
 
-    public Data(String name, String stream, String background, String maintext, String email, String facebook, String linkedin, String twitter, String area, String startdate, String programme, String internalexternal, String locationdescription, String currentrole, String districtdescription, String photo){
-        this.name = name;
+    public Data(int id, String name, String stream, String background, String maintext, String email, String facebook, String linkedin, String twitter, String area, String startdate, String programme, String internalexternal, String locationdescription, String currentrole, String districtdescription, String photo){
+        this.id = id;
+    	this.name = name;
         this.stream = stream;
         this.background = background;
         this.maintext = maintext;
@@ -44,7 +45,15 @@ public class Data {
 
     public Data(){}
 
-    public String getName() {
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
         return name;
     }
 
@@ -147,14 +156,6 @@ public class Data {
 
     public void setDistrictdescription(String districtdescription) {
         this.districtdescription = districtdescription;
-    }
-
-    public String getJoinDate() {
-        return startdate;
-    }
-
-    public void setJoinDate(String joinDate) {
-        this.startdate = joinDate;
     }
 
     public String getArea() {
