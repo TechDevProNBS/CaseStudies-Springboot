@@ -1,10 +1,6 @@
 pipeline {
     agent any
 environment {
-    VERSION = readMavenPom().getVersion()
-    registry = "casestudiesnbs/spring-boot-backend"
-    registryCredential = "dockerhub"
-    dockerImage = ''
 }
     stages {
 	stage('test') {
@@ -14,48 +10,28 @@ environment {
 	}
         stage('Build') {
             steps {
-		    sh 'mvn package -DskipTests'
-		    script {
-                     dockerImage = docker.build registry + ":$VERSION"
-             }
+		   echo "main Jenkins pipeline in Developer branch"
             }
         }
         stage('Deploy') {
             steps {
-             script {
-                    docker.withRegistry( '', registryCredential ) {
-                      dockerImage.push()
-            }
-	}
+                echo "main Jenkins pipeline in Developer branch"
 	}
         }
         stage('Testing Environment') {
             steps {
-                echo "API Tests not found"
+                echo "main Jenkins pipeline in Developer branch"
             }
         }
         stage('Staging') {
-          when{
-              expression{
-              env.BRANCH_NAME=='Staging'
-              }
-          }
             steps {
-                sh 'sudo docker-compose pull'
-                sh 'PROFILE=staging docker-compose up -d'
-                sh 'mvn test -Dtest=SeleniumSuite'
+                echo "main Jenkins pipeline in Developer branch"
             }
         }
         stage('Production') {
-            when{
-                expression{
-                env.BRANCH_NAME=='Production'
-                }
-            }
             steps {
-                sh 'sudo docker-compose pull'
-                sh 'PROFILE=production sudo docker-compose up -d'
-                echo "Production"
+                echo "main Jenkins pipeline in Developer branch"
+
             }
         }
     }
