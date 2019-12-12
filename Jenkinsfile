@@ -48,11 +48,7 @@ environment {
         }
         stage('Production') {
             steps {
-                sh 'docker-compose down'
-                script {
-                    docker.withRegistry( '', registryCredential ) {
-                      dockerImage.pull()
-            } 
+                sh 'docker-compose pull'
                 sh 'docker-compose up -d'
                 echo "Production started"
             }
