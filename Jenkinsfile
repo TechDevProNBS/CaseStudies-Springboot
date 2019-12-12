@@ -41,19 +41,19 @@ environment {
               }
           }
             steps {
-                sh 'sudo docker-compose pull'
+                sh 'docker-compose pull'
                 sh 'PROFILE=staging docker-compose up -d'
                 sh 'mvn test -Dtest=SeleniumSuite'
             }
         }
         stage('Production') {
             steps {
-                sh 'sudo docker-compose down'
+                sh 'docker-compose down'
                 script {
                     docker.withRegistry( '', registryCredential ) {
                       dockerImage.pull()
             } 
-                sh 'sudo docker-compose up -d'
+                sh 'docker-compose up -d'
                 echo "Production started"
             }
         }
