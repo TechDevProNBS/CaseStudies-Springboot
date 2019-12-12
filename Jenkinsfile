@@ -14,7 +14,7 @@ environment {
 	}
         stage('Build') {
             steps {
-		    sh 'mvn package -DskipTests'
+		    sh 'mvn clean package -DskipTests'
 		    script {
                      dockerImage = docker.build registry + ":$VERSION"
              }
