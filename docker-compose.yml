@@ -1,6 +1,6 @@
 version: '3'
 services:
   spring:
-    image: casestudiesnbs/spring-boot-backend
+    image: casestudiesnbs/spring-boot-backend2
     ports: 
       - "9012:9011"
